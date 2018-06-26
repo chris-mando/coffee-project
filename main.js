@@ -12,9 +12,8 @@
 
 function renderCoffee(coffee) {
     var html = '<tr class="coffee">';
-    html += coffee.id + " ";
-    html += coffee.name + " ";
-    html += coffee.roast;
+    html += "<h4>" + coffee.name + "</h4> " + " ";
+    html += "<p>" + coffee.roast + "</p>";
     html += '<br>';
     console.log(coffee.id);
     return html;
