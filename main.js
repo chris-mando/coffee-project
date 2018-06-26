@@ -22,7 +22,7 @@ function renderCoffee(coffee) {
 
 function renderCoffees(coffees) {
     var html = '';
-    for(var i = coffees.length - 1; i >= 0; i--) {
+    for(var i = 0; i <= coffees.length - 1; i++) {
         html += renderCoffee(coffees[i]);
     }
     return html;
@@ -62,11 +62,6 @@ var coffees = [
 ];
 document.getElementsByName('id').innerHTML = [0];
 
-function ascendingOrder(){
-    coffee.sort();
-    document.getElementsByName('id').innerHTML = [0];
-
-}
 
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
