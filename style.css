@@ -1,9 +1,3 @@
-h1 {
-    text-align: center;
-}
-
-
-
 
 table {
     border-collapse: collapse;
@@ -15,10 +9,7 @@ td, th {
     padding: 5px 10px;
 }
 
-#coffees h4,
+#coffees h3,
 #coffees p{
-
     display: inline;
-    vertical-align:;
-
 }

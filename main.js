@@ -11,11 +11,10 @@
 // }
 
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += "<h4>" + coffee.name + "</h4> " + " ";
-    html += "<p>" + coffee.roast + "</p>";
-    html += '<br>';
-    console.log(coffee.id);
+    var html = "<div class='coffee'>";
+    html += "<div class='col-6 float-left' style='margin-top: 25px;'>" + "<h3>" + coffee.name + "</h3>" + " ";
+    html += "<p>" + coffee.roast + "</p></div>";
+    html += "</div>";
     return html;
 }
 
