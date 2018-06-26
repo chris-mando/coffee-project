@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 // function renderCoffee(coffee) {
 //     var html = '<tr class="coffee">';
@@ -16,7 +16,7 @@ function renderCoffee(coffee) {
     html += coffee.name + " ";
     html += coffee.roast;
     html += '<br>';
-
+    console.log(coffee.id);
     return html;
 }
 
@@ -28,6 +28,7 @@ function renderCoffees(coffees) {
     return html;
 }
 
+
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
@@ -38,6 +39,8 @@ function updateCoffees(e) {
         }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
+
+
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -57,11 +60,17 @@ var coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
+document.getElementsByName('id').innerHTML = [0];
+
+function ascendingOrder(){
+    coffee.sort();
+    document.getElementsByName('id').innerHTML = [0];
+
+}
 
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 
 tbody.innerHTML = renderCoffees(coffees);
-
 submitButton.addEventListener('click', updateCoffees);
