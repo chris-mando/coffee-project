@@ -3,25 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <title>Coffee Shop</title>
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <h1 class="text-center">Coffee!</h1>
         <hr>
-
         <div class="row">
             <div id="coffees" class="col-6">
-
             </div>
 
             <div id="rightSide" class="col-6">
                 <form>
+                    <!-- select roast -->
                     <div class="form-group">
                         <label for="roast-selection">Roast</label>
                         <select id="roast-selection" class="form-control form-control-sm">
@@ -31,17 +29,17 @@
                             <option>dark</option>
                         </select>
                     </div>
-
+                    <!-- search box  -->
                     <div class="form-group">
                         <label for="coffeeName">Coffee Name</label>
                         <input type="text" class="form-control form-control-sm" id="coffeeName">
                     </div>
-
                     <button type="submit" id="submit" class="btn btn-primary btn-sm btn-block">Submit</button>
                 </form>
                 <hr>
-
                 <h3 class="text-center">Add a Coffee</h3>
+
+                <!-- add a coffee to list -->
                 <form>
                     <div class="form-group">
                         <label for="addSelection">Roast</label>
@@ -55,10 +53,8 @@
                         <label for="coffeeName2"> Name</label>
                         <input type="text" class="form-control form-control-sm" id="coffeeName2">
                     </div>
-
                     <button type="submit" id="submit2" class="btn btn-primary btn-sm btn-block">Submit</button>
                 </form>
-
             </div>
         </div>
 
