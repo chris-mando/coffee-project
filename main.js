@@ -1,15 +1,5 @@
 "use strict";
 
-// function renderCoffee(coffee) {
-//     var html = '<tr class="coffee">';
-//     html += '<td>' + coffee.id + '</td>';
-//     html += '<td>' + coffee.name + '</td>';
-//     html += '<td>' + coffee.roast + '</td>';
-//     html += '</tr>';
-//
-//     return html;
-// }
-
 function renderCoffee(coffee) {
     var html = "<div class='coffee'>";
     html += "<div class='col-6 float-left' style='margin-top: 25px;'>" + "<h3>" + coffee.name + "</h3>" + " ";
@@ -64,11 +54,8 @@ var coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
-document.getElementsByName('id').innerHTML = [0];
-
-
+//document.getElementsByName('id').innerHTML = [0];
 var tbody = document.querySelector('#coffees');
-
 
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
@@ -78,37 +65,28 @@ var searchCoffee = document.querySelector('#coffeeName'); //added search field
 searchCoffee.addEventListener('change', updateCoffees);
 searchCoffee.addEventListener('keyup', updateCoffees);
 
-var addRoast = document.getElementById('addSelection');
-var subBtn2 = document.querySelector('submit2');
-var addName = document.getElementById('coffeeName2')
+// ADD COFFEE FORM
+var subBtn2 = document.querySelector('#submit2');
 
 function addCoffee(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
-    var newRoast = addRoast.value;
-    var newName = addName.value;
-    var addCoffees = [];
-    if (newRoast) {
-         addCoffees.push(newRoast);
-         addCoffees.push(newName);
+    var coffeeObj = {
+        id: '',
+        name: '',
+        roast: '',
     }
-    return addCoffees;
 
+    coffeeObj.id = coffees.length + 1;
+    coffeeObj.roast = document.getElementById('addSelection').value;
+    coffeeObj.name = document.getElementById('coffeeName2').value;
+    coffees.push(coffeeObj);
 
+    console.log(coffeeObj);
+    tbody.innerHTML = renderCoffees(coffeeObj);
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 tbody.innerHTML = renderCoffees(coffees);
 submitButton.addEventListener('click', updateCoffees);
-subBtn2.addEventListener('click', addCoffees);
+subBtn2.addEventListener('click', addCoffee);
+subBtn2.onclick = function() { tbody.innerHTML = renderCoffees(coffees); };
 
