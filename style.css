@@ -1,17 +1,19 @@
+body {
+    background:url("img/bgrndCof.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+}
 
 table {
     border-collapse: collapse;
     margin: 15px 0;
 }
 
-footer {
-    background:url("img/beansFooter3.jpg");
-    /* Full height */
-    height: 100px;
-    width:100%;
-    /*background-repeat: no-repeat;*/
-    /*background-size: cover;*/
-}
+/*footer {*/
+    /*background:url("img/beansFooter3.jpg");*/
+    /*height: 100px;*/
+    /*width:100%;*/
+/*}*/
 
 td, th {
     border: 1px solid black;
@@ -23,12 +25,24 @@ td, th {
     display: inline;
 }
 
-.jumbotron{
-    background: url("img/coffeeandcode.jpg");
+.jumbotron {
+    background:url("img/coffeeandcode.jpg");
     width:100%;
-    height:400px;
+    height:380px;
     background-repeat: no-repeat;
     background-size:cover;
-    padding-left: 0;
-    padding-right: 0;
+
+}
+
+.whitebg {
+    z-index: -1;
+    background: white;
+    opacity: 0.8;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background-color: #9f5410;
+    border: none;
 }

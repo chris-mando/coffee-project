@@ -23,13 +23,13 @@ function updateCoffees(e) {
     var filteredCoffees = [];
     if (selectedRoast === 'all') {
         coffees.forEach(function(coffee) {
-            if(coffee.name.includes(searchCof)) {
+            if(coffee.name.toLowerCase().includes(searchCof.toLowerCase())) {
                 filteredCoffees.push(coffee);
             }
         });
     } else {
         coffees.forEach(function(coffee) {
-            if (coffee.roast === selectedRoast) {
+            if (coffee.roast.toLowerCase() === selectedRoast.toLowerCase()) {
                 filteredCoffees.push(coffee);
             }
         });

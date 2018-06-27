@@ -11,7 +11,7 @@
 
 </head>
 <body>
-    <div class="jumbotron jumbotron-fluid d-none d-md-block">
+    <div class="jumbotron jumbotron-fluid d-none d-md-block border-bottom border-light">
         <div class="container">
             <h1 class="display-4 text-right text-light font-weight-bold">Coffee!</h1>
             <!--<img class="img-responsive" src="img/coffeeandcode.jpg" alt="coffee" >-->
@@ -19,62 +19,63 @@
     </div>
 
     <div class="container">
-        <h1 class="text-center">Coffee!</h1>
-        <hr>
-        <div class="row">
-            <div id="coffees" class="col-6">
-            </div>
+        <div class="whitebg">
+            <div class="row">
+                <div id="coffees" class="col-6">
+                </div>
 
-            <div id="rightSide" class="col-6">
-                <form>
-                    <!-- select roast -->
-                    <div class="form-group">
-                        <label for="roast-selection">Roast</label>
-                        <select id="roast-selection" class="form-control form-control-sm">
-                            <option>all</option>
-                            <option>light</option>
-                            <option>medium</option>
-                            <option>dark</option>
-                        </select>
-                    </div>
-                    <!-- search box  -->
-                    <div class="form-group">
-                        <label for="coffeeName">Coffee Name</label>
-                        <input type="text" class="form-control form-control-sm" id="coffeeName">
-                    </div>
-                    <button type="submit" id="submit" class="btn btn-primary btn-sm btn-block">Submit</button>
-                </form>
-                <hr>
-                <h3 class="text-center">Add a Coffee</h3>
+                <div id="rightSide" class="col-6">
+                    <form>
+                        <!-- select roast -->
+                        <div class="form-group">
+                            <label for="roast-selection">Roast</label>
+                            <select id="roast-selection" class="form-control form-control-sm">
+                                <option>all</option>
+                                <option>light</option>
+                                <option>medium</option>
+                                <option>dark</option>
+                            </select>
+                        </div>
+                        <!-- search box  -->
+                        <div class="form-group">
+                            <label for="coffeeName">Coffee Name</label>
+                            <input type="text" class="form-control form-control-sm" id="coffeeName">
+                        </div>
+                        <button type="submit" id="submit" class="btn btn-primary btn-sm btn-block">Submit</button>
+                    </form>
+                    <hr>
+                    <h3 class="text-center">Add a Coffee</h3>
 
-                <!-- add a coffee to list -->
-                <form>
-                    <div class="form-group">
-                        <label for="addSelection">Roast</label>
-                        <select id="addSelection" class="form-control form-control-sm">
-                            <option>light</option>
-                            <option>medium</option>
-                            <option>dark</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="coffeeName2"> Name</label>
-                        <input type="text" class="form-control form-control-sm" id="coffeeName2">
-                    </div>
-                    <button type="submit" id="submit2" class="btn btn-primary btn-sm btn-block">Submit</button>
-                </form>
-            </div>
-        </div>
-        <footer>
-
-        </footer>
-
-        <script src="main.js"></script>
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+                    <!-- add a coffee to list -->
+                    <form>
+                        <div class="form-group">
+                            <label for="addSelection">Roast</label>
+                            <select id="addSelection" class="form-control form-control-sm">
+                                <option>light</option>
+                                <option>medium</option>
+                                <option>dark</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="coffeeName2"> Name</label>
+                            <input type="text" class="form-control form-control-sm" id="coffeeName2">
+                        </div>
+                        <button type="submit" id="submit2" class="btn btn-primary btn-sm btn-block">Submit</button>
+                    </form>
+                </div>
+            </div><!-- closes row -->
+        </div><!-- closes whitebg div -->
     </div>
+    <footer>
+
+    </footer>
+
+    <script src="main.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
 </body>
 </body>
 </html>
