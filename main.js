@@ -78,7 +78,37 @@ var searchCoffee = document.querySelector('#coffeeName'); //added search field
 searchCoffee.addEventListener('change', updateCoffees);
 searchCoffee.addEventListener('keyup', updateCoffees);
 
+var addRoast = document.getElementById('addSelection');
+var subBtn2 = document.querySelector('submit2');
+var addName = document.getElementById('coffeeName2')
+
+function addCoffee(e) {
+    e.preventDefault(); // don't submit the form, we just want to update the data
+    var newRoast = addRoast.value;
+    var newName = addName.value;
+    var addCoffees = [];
+    if (newRoast) {
+         addCoffees.push(newRoast);
+         addCoffees.push(newName);
+    }
+    return addCoffees;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 tbody.innerHTML = renderCoffees(coffees);
 submitButton.addEventListener('click', updateCoffees);
+subBtn2.addEventListener('click', addCoffees);
+
