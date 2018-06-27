@@ -33,13 +33,13 @@ function updateCoffees(e) {
     var filteredCoffees = [];
     if (selectedRoast === 'all') {
         coffees.forEach(function(coffee) {
-            filteredCoffees.push(coffee);
+            if(coffee.name.includes(searchCof)) {
+                filteredCoffees.push(coffee);
+            }
         });
     } else {
         coffees.forEach(function(coffee) {
             if (coffee.roast === selectedRoast) {
-                filteredCoffees.push(coffee);
-            } else if (searchCof === coffee.name) {
                 filteredCoffees.push(coffee);
             }
         });
@@ -75,7 +75,7 @@ var roastSelection = document.querySelector('#roast-selection');
 roastSelection.addEventListener('change', updateCoffees); //change on select
 
 var searchCoffee = document.querySelector('#coffeeName'); //added search field
- searchCoffee.addEventListener('change', updateCoffees);
+searchCoffee.addEventListener('change', updateCoffees);
 searchCoffee.addEventListener('keyup', updateCoffees);
 
 
